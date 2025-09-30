@@ -110,10 +110,11 @@ export const logout = async (req, res) => {
 export const updateProfile = async (req, res) => {
   try {
     const { fullname, email, phoneNumber, bio, skills } = req.body;
+    
     const file = req.file;
     
 
-    // clodnary will come here
+    // clodnary will be come here
     let skillsArray
     if(skills){
       skillsArray = skills.split(",");
