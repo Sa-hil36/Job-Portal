@@ -6,7 +6,7 @@ import {Button} from '../ui/button'
 import {User2, LogOut} from 'lucide-react'
 
 function Navbar() {
-  const user = true;
+  const user = false;
   return (
     <div className='bg-white'>
       <div className='flex items-center justify-between mx-auto max-w-7xl h-16'>
@@ -21,9 +21,9 @@ function Navbar() {
         </ul>
         {
           !user ? (
-            <div>
-              <Button variant='outline'>Login</Button>
-              <Button className='bg-[#6A38C2] hover:bg-[#5b30a6]'>Signup</Button>
+            <div className='flex items-center gap-2'>
+              <Link to="/login"><Button variant='outline'>Login</Button></Link>
+              <Link to="/signup"><Button className='bg-[#6A38C2] hover:bg-[#5b30a6]'>Signup</Button></Link>
             </div>
           ) : ( <Popover>
           <PopoverTrigger>
